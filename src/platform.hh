@@ -29,4 +29,7 @@ void FreeUnusedMemory();
 void TraceMe();
 
 void SpawnThread(void *(*fn)(void *), void *arg);
+
+// Set process niceness (no-op on Windows).
+int SetNiceness(int priority);
 } // namespace ccls

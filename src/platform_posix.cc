@@ -87,6 +87,10 @@ void SpawnThread(void *(*fn)(void *), void *arg) {
   pthread_create(&thd, &attr, fn, arg);
   pthread_attr_destroy(&attr);
 }
+
+int SetNiceness(int priority) {
+  return nice(priority);
+}
 } // namespace ccls
 
 #endif

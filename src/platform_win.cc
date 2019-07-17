@@ -60,6 +60,9 @@ void TraceMe() {}
 void SpawnThread(void *(*fn)(void *), void *arg) {
   std::thread(fn, arg).detach();
 }
+
+// Not supported on Windows platform.
+int SetNiceness(int priority) { return -1; }
 }
 
 #endif

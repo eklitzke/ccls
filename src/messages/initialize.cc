@@ -301,6 +301,8 @@ void Initialize(MessageHandler *m, InitializeParam &param, ReplyOnce &reply) {
       g_config->cache.directory = NormalizePath(Path.str());
       EnsureEndsInSlash(g_config->cache.directory);
     }
+
+    SetNiceness(g_config->niceness);
   }
 
   // Client capabilities

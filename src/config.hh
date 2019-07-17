@@ -41,6 +41,9 @@ struct Config {
   // Directory containing compile_commands.json.
   std::string compilationDatabaseDirectory;
 
+  // Process niceness (on unix)
+  int niceness;
+
   struct Cache {
     // Cache directory for indexed files, either absolute or relative to the
     // project root.
